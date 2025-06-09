@@ -1,0 +1,152 @@
+    /* General Styles */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(135deg, #fbc2eb, #a6c1ee, #FFEFBA);
+        animation: gradientBG 8s infinite alternate ease-in-out;
+        background-size: 200% 200%;
+    }
+
+    /* Animated Background */
+    @keyframes gradientBG {
+        0% { background-position: 0% 50%; background-color: #fbc2eb; }
+        50% { background-position: 100% 50%; background-color: #a6c1ee; }
+        100% { background-position: 0% 50%; background-color: #FFEFBA; }
+    }
+
+    .container {
+        max-width: 800px;
+        width: 100%;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 12px;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Hover Effect */
+    .container:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 1.8em;
+    }
+
+    h3 {
+        color: #555;
+        margin-top: 5px;
+        font-size: 1.3em;
+    }
+
+    .smiley-rating {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .smiley-rating span {
+        font-size: 40px;
+        cursor: pointer;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .smiley-rating span:hover {
+        transform: scale(1.2);
+        color: #ff9800;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+        box-sizing: border-box;
+        transition: border 0.3s ease;
+    }
+
+    textarea:focus {
+        border-color: #4A90E2;
+        outline: none;
+    }
+
+    /* Submit Button */
+    button {
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(to right, #4CAF50, #45a049);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1em;
+        margin-top: 10px;
+        transition: all 0.4s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    button:hover {
+        background: linear-gradient(to right, #45a049, #2e7d32);
+        transform: scale(1.05);
+    }
+
+    /* Messages */
+    .message {
+        margin-top: 10px;
+        font-weight: bold;
+        color: #4CAF50;
+    }
+
+    .greeting {
+        margin-top: 10px;
+        font-weight: bold;
+        color: #FF5733;
+    }
+
+    /* Gradient Button */
+    .btn-grad {
+        background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
+        padding: 12px 20px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all 0.5s ease;
+        background-size: 200% auto;
+        color: white;
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        font-size: 1em;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .btn-grad:hover {
+        background-position: right center;
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 600px) {
+        h2 {
+            font-size: 1.5em;
+        }
+
+        h3 {
+            font-size: 1.2em;
+        }
+
+        .smiley-rating span {
+            font-size: 30px;
+        }
+    }
